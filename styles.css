@@ -20,6 +20,10 @@ h2 {
     margin-top: 0;
 }
 
+h3{
+    padding: 10px;
+}
+
 #mos_score {
     margin: 10px auto;
     text-align: center;
@@ -36,10 +40,35 @@ h2 {
     background-color: #f2f2f2;
 }
 
-.audio-section {
+.audio-section-speaker1,
+.audio-section-speaker2,
+.audio-section-speaker3,
+.audio-section-speaker4,
+.audio-section-speaker5,
+.audio-section-speaker6,
+.audio-section-speaker7,
+.audio-section-speaker8,
+.audio-section-speaker9,
+.audio-section-speaker10 {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; /* Adjust as needed */
 }
+
+.audio-section-speaker1 > div,
+.audio-section-speaker2 > div,
+.audio-section-speaker3 > div,
+.audio-section-speaker4 > div,
+.audio-section-speaker5 > div,
+.audio-section-speaker6 > div,
+.audio-section-speaker7 > div,
+.audio-section-speaker8 > div,
+.audio-section-speaker9 > div,
+.audio-section-speaker10 > div {
+    flex: 1;
+    margin: 0 10px; /* Adjust spacing between divs as needed */
+}
+
+
 
 audio {
     margin-bottom: 10px;

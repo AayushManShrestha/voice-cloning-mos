@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Cloning MOS Evaluation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Voice Cloning MOS Evaluation</h1>
+    </header>
+    <main>
+        <section class="table-section">
+            <table id="mos_score">
+                <tbody>
+                    <tr>
+                        <td>MOS Score</td>
+                        <td>Speech Quality Description</td>
+                        <td>Speech Similarity Description</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Not understandable at all</td>
+                        <td>Definitely not the same person, even the gender is different</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Some words are unclear and has pronunciation issues</td>
+                        <td>Low chance of being the same person: There is much difference</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Generally understandable and acceptable but the rhythmic pause is not good enough.</td>
+                        <td>High chance of being the same person: There is slight similarity.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Natural, clear, and understandable.</td>
+                        <td>Sounds like the same person, but tone and speaking style don't match</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Broadcasting level: Unable to distinguish between human voice and synthesized voice</td>
+                        <td>Definitely sounds like the same person: Tone and speaking style match</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <h2 style="text-align: center;">Cloned Audio Samples</h2>
+        <section class="audio-section">
+            <div class="original-audio">
+                <audio controls>
+                    <source src="original_audio_speaker1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+            <div class="short-cloned-audio">
+                <audio controls>
+                    <source src="short_cloned_audio_speaker1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+            <div class="medium-cloned-audio">
+                <audio controls>
+                    <source src="medium_cloned_audio_speaker1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        
+            <div class="long-cloned-audio">
+                <audio controls>
+                    <source src="long_cloned_audio_speaker1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="mos-dropdown">
+                <label for="mos-dropdown-speaker1">Speech Quality:</label>
+                <select name="mos-dropdown-speaker1" id="mos-dropdown-speaker1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br>
+                <label for="mos-dropdown-speaker1">Speech Similarity:</label>
+                <select name="mos-dropdown-speaker1" id="mos-dropdown-speaker1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </section>      
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- <audio controls id="speaker1">
+    <source src="original_audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<audio controls id="speaker2">
+    <source src="cloned_audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio> -->
