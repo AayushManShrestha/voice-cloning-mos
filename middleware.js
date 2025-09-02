@@ -1,7 +1,5 @@
-import { next } from '@vercel/edge';
-
-export default function middleware(req) {
-  return next({
+export function middleware(req) {
+  const response = new Response(null, {
     headers: {
       'Referrer-Policy': 'origin-when-cross-origin',
       'X-Frame-Options': 'DENY',
@@ -11,4 +9,6 @@ export default function middleware(req) {
         'max-age=31536000; includeSubDomains; preload',
     },
   });
+
+  return response;
 }
